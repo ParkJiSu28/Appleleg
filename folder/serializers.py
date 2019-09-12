@@ -28,3 +28,17 @@ class ManagementSerializer(ModelSerializer):
     class Meta:
         model = Management
         fields = '__all__'
+
+
+class QuizDetailSerializer(ModelSerializer):
+
+    class Meta:
+        model = Quiz
+        fields = ('quiz_id', 'title', 'Management_id')
+
+
+class WrongnoteDetailSerializer(ModelSerializer):
+
+    class Meta:
+        model = Wrongnote
+        fields = ('wrong_id', 'title', 'Management_id')
